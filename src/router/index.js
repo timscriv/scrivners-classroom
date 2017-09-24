@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
 
 Vue.use(Router)
 
+import home from '@/components/home'
+import recipes from '@/components/recipes'
+
 export default new Router({
+  mode: 'history',
+  linkActiveClass: 'is-active',
   routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello
-    }
+    { path: '/', component: home },
+    { path: '/recipes', component: recipes }
   ]
 })
